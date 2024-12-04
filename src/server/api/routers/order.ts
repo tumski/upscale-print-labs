@@ -3,6 +3,16 @@ import { router, publicProcedure } from "@/server/api/trpc";
 import { prisma } from "@/server/db";
 import { OrderStatus } from "@prisma/client";
 
+// Define shipping schema
+const shippingSchema = z
+  .object({
+    address: z.string(),
+    city: z.string(),
+    country: z.string(),
+    postalCode: z.string(),
+  })
+  .or(z.object({})); // Allow empty object for initial upload
+
 export const orderRouter = router({
   create: publicProcedure
     .input(
@@ -12,6 +22,7 @@ export const orderRouter = router({
         currency: z.string(),
         locale: z.string(),
         language: z.string(),
+        shipping: shippingSchema.default({}),
       })
     )
     .mutation(async ({ input }) => {
@@ -19,6 +30,7 @@ export const orderRouter = router({
         data: {
           ...input,
           status: OrderStatus.UPLOADED,
+          shipping: input.shipping || {},
         },
       });
     }),
