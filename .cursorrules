@@ -16,6 +16,26 @@
 - Use named exports instead of default exports
 - Use arrow functions for consistency
 
+## TypeScript and Data Validation
+
+- Define Zod schemas for all data structures
+- Always provide default values for optional fields
+- Match Prisma schema types exactly in Zod schemas
+- Use strict type checking (no any, unknown when possible)
+- Define reusable type definitions in separate files
+- Use type inference where possible
+- Document complex types with JSDoc comments
+- Handle nullable and optional fields explicitly
+
+## Database and Models
+
+- Always define complete Zod schemas for Prisma models
+- Include all required fields in create/update operations
+- Use enums for status and type fields
+- Validate data before database operations
+- Handle JSON fields with proper type definitions
+- Keep Prisma schema and Zod schemas in sync
+
 ## UI Components
 
 - Mobile-first approach for all components and layouts
@@ -66,12 +86,15 @@
 - Implement proper error handling
 - Follow REST principles for API design
 - Use Prisma for database operations
+- Define complete input/output types for all endpoints
+- Validate all incoming data with Zod
 
 ## Environment Variables
 
 - Never commit .env files
 - Use .env.example for documentation
 - Prefix all environment variables with NEXT*PUBLIC* for client usage
+- Document all required environment variables
 
 ## Git Conventions
 
@@ -85,6 +108,8 @@
 - Write unit tests for utilities
 - Write integration tests for API endpoints
 - Use React Testing Library for component tests
+- Test error states and edge cases
+- Test data validation
 
 ## Performance
 
@@ -99,3 +124,5 @@
 - Use proper CORS settings
 - Follow OWASP security guidelines
 - Handle sensitive data appropriately
+- Validate all user inputs
+- Sanitize data before storage
