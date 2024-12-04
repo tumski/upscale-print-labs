@@ -1,0 +1,76 @@
+# Project Rules and Conventions
+
+## Package Management
+
+- Always use pnpm for package management
+- Lock file (pnpm-lock.yaml) must be committed
+- Use exact versions for production dependencies
+- Development dependencies can use ^ for minor version updates
+
+## Code Style
+
+- Use TypeScript for all files
+- Enforce strict TypeScript mode
+- Use ESLint with Next.js recommended rules
+- Follow Prettier formatting
+- Use named exports instead of default exports
+- Use arrow functions for consistency
+
+## Project Structure
+
+- Follow the structure defined in PRD.md
+- Keep components atomic and reusable
+- Place types in separate .d.ts files
+- Use barrel exports (index.ts) for cleaner imports
+
+## State Management
+
+- Use React Query for server state
+- Use React Context for global UI state
+- Implement proper loading and error states
+
+## Internationalization
+
+- All text must be in translation files
+- Use next-intl for translations
+- Follow the locale structure: /[locale]/[path]
+
+## API and Backend
+
+- Use tRPC for type-safe API endpoints
+- Implement proper error handling
+- Follow REST principles for API design
+- Use Prisma for database operations
+
+## Environment Variables
+
+- Never commit .env files
+- Use .env.example for documentation
+- Prefix all environment variables with NEXT*PUBLIC* for client usage
+
+## Git Conventions
+
+- Use conventional commits
+- Branch naming: feature/, bugfix/, hotfix/
+- Squash commits when merging
+- Write descriptive commit messages
+
+## Testing
+
+- Write unit tests for utilities
+- Write integration tests for API endpoints
+- Use React Testing Library for component tests
+
+## Performance
+
+- Optimize images using next/image
+- Implement proper code splitting
+- Use proper caching strategies
+- Monitor and optimize bundle size
+
+## Security
+
+- Implement proper input validation
+- Use proper CORS settings
+- Follow OWASP security guidelines
+- Handle sensitive data appropriately
