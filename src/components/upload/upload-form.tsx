@@ -59,7 +59,8 @@ export function UploadForm() {
       
       // Navigate to compare page
       router.push('/compare');
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error('Upload error:', error);
       toast({
         variant: "destructive",
         title: "Upload failed",
