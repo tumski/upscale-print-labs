@@ -1,6 +1,7 @@
 "use server";
 
 import { uploadToBlob } from "@/lib/blob";
+import { enhanceImage } from "@/lib/topaz";
 
 export async function uploadImage(formData: FormData) {
   try {
@@ -33,5 +34,29 @@ export async function uploadImage(formData: FormData) {
   } catch (error) {
     console.error("Error in uploadImage:", error);
     return { success: false as const, error: "Failed to process image" };
+  }
+}
+
+export async function enhanceImageAction(imageUrl: string) {
+  try {
+    const result = await enhanceImage(imageUrl, {
+      outputFormat: "jpeg",
+      faceEnhancement: true,
+    });
+
+    if (!result.success || !result.url) {
+      throw new Error(result.error || "Failed to enhance image");
+    }
+
+    return {
+      success: true as const,
+      url: result.url,
+    };
+  } catch (error) {
+    console.error("Error in enhanceImage:", error);
+    return {
+      success: false as const,
+      error: error instanceof Error ? error.message : "Failed to enhance image",
+    };
   }
 }
