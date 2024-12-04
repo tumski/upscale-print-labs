@@ -15,10 +15,6 @@
   - ✅ Resolved Prisma schema type errors
   - ✅ Added proper Zod validation
   - ✅ Updated ESLint configuration
-- ✅ Set up environment variables
-  - ✅ Created secure .env.example template
-  - ✅ Documented required variables
-  - ✅ Secured sensitive credentials
 
 ### Project Structure
 
@@ -42,6 +38,9 @@
   - ✅ Basic page structure
   - ✅ Connected CTA to new route
   - ✅ Mobile-first design
+  - ✅ Drag and drop upload
+  - ✅ Image preview
+  - ✅ Upload progress
 - ✅ Created /compare route
   - ✅ Image preview
   - ✅ Auto-redirect if no image
@@ -84,26 +83,49 @@
   - ✅ Proper error handling
   - ✅ Input validation
 
-## In Progress
-
-- 🔄 Building image comparison UI
-  - Next: Add side-by-side comparison
-  - Next: Add zoom functionality
-  - Next: Add before/after slider
-
 ## Next Steps
 
 ### Immediate Tasks
 
-1. Add image comparison UI
-2. Set up Stripe integration
-3. Add print size selection
+1. Integrate Prodigi API
+
+   - Set up API client with proper types
+   - Implement product catalog fetching
+   - Add webhook handling for order updates
+   - Create order submission flow
+
+2. Build Product Selection UI
+
+   - Create product catalog browser
+   - Group products by type (canvas, posters, frames)
+   - Show available sizes per product
+   - Display pricing information
+   - Add framing options where applicable
+   - Create interactive preview with user's image
+   - Implement mobile-friendly product grid
+
+3. Create Order Form
+
+   - Add customer information fields
+   - Implement address validation
+   - Add shipping options based on location
+   - Create order summary view
+   - Add terms acceptance checkbox
+   - Implement form validation
+   - Save order to database
+
+4. Enhance Order Flow
+   - Create order status tracking
+   - Implement email notifications
+   - Add order confirmation page
+   - Create order management dashboard
+   - Add order history view
 
 ### Pending Features
 
-- [ ] Print size options
+- [ ] Image enhancement integration
 - [ ] Payment integration
-- [ ] Print service integration
+- [ ] Multi-currency support
 - [ ] Internationalization
 - [ ] Authentication
 - [ ] Error handling
