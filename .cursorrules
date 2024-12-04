@@ -16,6 +16,31 @@
 - Use named exports instead of default exports
 - Use arrow functions for consistency
 
+## UI Components
+
+- Mobile-first approach for all components and layouts
+- Design and test on mobile before desktop
+- Use shadcn/ui as the primary component library
+- Customize components through tailwind.config.ts
+- Follow shadcn/ui's styling conventions
+- Keep components atomic and reusable
+- Use CSS variables for theming
+- Ensure touch-friendly interactions
+- Minimum tap target size of 44x44px
+- Avoid hover-only interactions
+
+## Responsive Design
+
+- Start with mobile layout (375px width)
+- Add breakpoints only when needed
+- Use relative units (rem, em) over pixels
+- Test on real mobile devices
+- Consider network conditions
+- Optimize images for mobile
+- Ensure readable font sizes (min 16px)
+- Account for touch interactions
+- Consider offline capabilities
+
 ## Project Structure
 
 - Follow the structure defined in PRD.md

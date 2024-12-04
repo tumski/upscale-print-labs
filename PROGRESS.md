@@ -20,17 +20,39 @@
 - ✅ Set up Order router with CRUD operations
 - ✅ Set up tRPC API route
 
+### UI Setup
+
+- ✅ Installed and configured shadcn/ui
+- ✅ Set up TailwindCSS configuration
+- ✅ Created utility functions for styling
+- ✅ Configured Inter font
+- ✅ Created landing page with hero section
+  - ✅ Responsive design
+  - ✅ Main CTA button
+  - ✅ Value proposition text
+- ✅ Created /create route for photo upload
+  - ✅ Basic page structure
+  - ✅ Connected CTA to new route
+
 ## In Progress
 
-- 🔄 Setting up next-intl for internationalization
+- 🔄 Building photo upload functionality
+  - Next: Create upload component
+  - Next: Implement drag-and-drop
+  - Next: Add image preview
 
 ## Next Steps
 
 ### Immediate Tasks
 
-1. Set up next-intl for internationalization
-2. Configure Vercel Blob storage
-3. Set up Stripe integration
+1. Build photo upload component with:
+   - Drag and drop zone
+   - File selection button
+   - Upload progress indicator
+   - File type validation
+2. Implement image preview
+3. Configure Vercel Blob storage
+4. Set up Stripe integration
 
 ### Pending Features
 
@@ -58,3 +80,4 @@
 
 1. Missing proper error handling
 2. Need to set up remaining environment variables
+3. TypeScript error in Order router (shipping field required)
