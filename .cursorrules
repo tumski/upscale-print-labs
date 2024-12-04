@@ -4,8 +4,8 @@
 
 - Always use pnpm for package management
 - Lock file (pnpm-lock.yaml) must be committed
-- Use exact versions for production dependencies
-- Development dependencies can use ^ for minor version updates
+- Use semantic versioning (^) for better dependency management
+- Regular updates through automated tools (Renovate)
 
 ## Code Style
 
