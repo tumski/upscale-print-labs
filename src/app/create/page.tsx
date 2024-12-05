@@ -10,8 +10,8 @@ export default function CreatePage() {
   const onUploadComplete = useCallback((url: string) => {
     // Store the URL in localStorage
     localStorage.setItem('originalImageUrl', url);
-    // Navigate to the compare page
-    router.push('/compare');
+    // Navigate to the format page
+    router.push('/format');
   }, [router]);
 
   return (

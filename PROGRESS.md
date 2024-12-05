@@ -41,10 +41,11 @@
   - ✅ Drag and drop upload
   - ✅ Image preview
   - ✅ Upload progress
-- ✅ Created /compare route
+- ✅ Created /format route
   - ✅ Image preview
   - ✅ Auto-redirect if no image
   - ✅ Back button
+  - ✅ Fixed localStorage key consistency
 
 ### File Upload
 
@@ -83,13 +84,21 @@
   - ✅ Proper error handling
   - ✅ Input validation
 
+### Code Cleanup
+
+- ✅ Removed Prodigi integration for fresh start
+- ✅ Cleaned up tRPC routers
+- ✅ Simplified product selector component
+- ✅ Fixed image preview persistence
+
 ## Next Steps
 
 ### Immediate Tasks
 
-1. Integrate Prodigi API
+1. Design and Implement New Print Service Integration
 
-   - Set up API client with proper types
+   - Research and select print service provider
+   - Design API integration architecture
    - Implement product catalog fetching
    - Add webhook handling for order updates
    - Create order submission flow
@@ -97,24 +106,24 @@
 2. Build Product Selection UI
 
    - Create product catalog browser
-   - Group products by type (canvas, posters, frames)
-   - Show available sizes per product
-   - Display pricing information
+   - Design mobile-first product grid
+   - Implement size selection
    - Add framing options where applicable
    - Create interactive preview with user's image
-   - Implement mobile-friendly product grid
+   - Add pricing display
 
-3. Create Order Form
+3. Create Order Flow
 
-   - Add customer information fields
-   - Implement address validation
-   - Add shipping options based on location
+   - Design order form UI
+   - Implement customer information collection
+   - Add address validation
+   - Implement shipping options
    - Create order summary view
-   - Add terms acceptance checkbox
+   - Add terms acceptance
    - Implement form validation
    - Save order to database
 
-4. Enhance Order Flow
+4. Enhance Order Management
    - Create order status tracking
    - Implement email notifications
    - Add order confirmation page
@@ -123,7 +132,7 @@
 
 ### Pending Features
 
-- [ ] Image enhancement integration
+- [ ] Print service integration
 - [ ] Payment integration
 - [ ] Multi-currency support
 - [ ] Internationalization
