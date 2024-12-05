@@ -80,6 +80,52 @@
 - Use next-intl for translations
 - Follow the locale structure: /[locale]/[path]
 
+## Internationalization (i18n) Rules
+
+- All user-facing text must be internationalized using next-intl
+- Never hardcode text strings directly in components or pages
+- Place all translations in /messages/{locale}.json files
+- Use semantic keys following the pattern: {page}.{section}.{element}
+- Example: "home.hero.title"
+- Comments in translation files should describe context
+- Include placeholder documentation in translation strings
+- Handle pluralization using ICU MessageFormat
+- Maintain consistent casing in translation keys
+- Group related translations under common namespaces
+- Keep translation keys in sync across all locale files
+- Document any new translation keys in PR descriptions
+- Test all translations in development mode
+- Validate translation files for missing/unused keys
+
+## Translation File Structure
+
+messages/
+├── en.json # English (default)
+├── es.json # Spanish
+└── fr.json # French
+
+## Translation Key Examples
+
+{
+"common": {
+"buttons": {
+"submit": "Submit",
+"cancel": "Cancel"
+},
+"errors": {
+"required": "{field} is required"
+}
+},
+"pages": {
+"home": {
+"hero": {
+"title": "Welcome",
+"description": "Description here"
+}
+}
+}
+}
+
 ## API and Backend
 
 - Use tRPC for type-safe API endpoints
